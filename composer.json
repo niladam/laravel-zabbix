@@ -1,0 +1,36 @@
+{
+    "name": "niladam/laravel-zabbix",
+    "description": "A PHP & Laravel zabbix sender and provider",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Madalin Tache",
+            "email": "niladam@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4 <=8.4",
+        "ext-json": "*",
+        "ext-sockets": "*",
+        "webmozart/assert": "^1.11"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.65",
+        "phpunit/phpunit": "^9.6"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Niladam\\LaravelZabbix\\ZabbixServiceProvider"
+            ]
+        }
+    },
+    "suggest": {
+        "illuminate/laravel": "If using Laravel"
+    },
+    "autoload": {
+        "psr-4": {
+            "Niladam\\LaravelZabbix\\": "src/"
+        }
+    }
+}
