@@ -3,8 +3,7 @@
 
 This package provides a seamless way to send metrics, alerts, and notifications to a Zabbix server within PHP & Laravel applications. It includes powerful abstractions, support for named configurations, and simplified usage via `make` methods.
 
-The package borrows code and is inspired by the [Zabbix sender
-](https://github.com/zarplata/zabbix-sender-php) package. Some credits go to [zarplata](https://github.com/zarplata)
+The package borrows code and is inspired by the [Zabbix sender](https://github.com/zarplata/zabbix-sender-php) package. Some credits go to [zarplata](https://github.com/zarplata).
 
 ---
 
