@@ -1,4 +1,4 @@
-name: Run PHP Tests
+name: Tests
 
 on:
   pull_request:

@@ -1,3 +1,4 @@
+![Tests](https://github.com/niladam/laravel-zabbix/actions/workflows/run-tests.yml/badge.svg)
 
 # Laravel Zabbix Integration
 
