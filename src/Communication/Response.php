@@ -33,8 +33,6 @@ class Response
      */
     private ?float $duration;
 
-    private ?string  $humanDuration;
-
     public function __construct(array $response)
     {
         $this->parseZabbixResponse($response);
@@ -95,7 +93,7 @@ class Response
     {
         if (!isset($response['response'])) {
             throw new ResponseException(
-                'invalid zabbix server response, missing `response` field'
+                'Invalid zabbix server response, missing `response` field'
             );
         }
 
@@ -103,7 +101,7 @@ class Response
 
         if (!isset($response['info'])) {
             throw new ResponseException(
-                'invalid zabbix server response, missing `info` field'
+                'Invalid zabbix server response, missing `info` field'
             );
         }
 
@@ -153,7 +151,6 @@ class Response
         $this->failedItems = (int) $matches[2];
         $this->totalItems = (int) $matches[3];
         $this->duration = (float) $matches[4];
-        $this->humanDuration = $this->convertToHumanReadableTime($matches[4]);
     }
 
     public function convertToHumanReadableTime(float $seconds): string

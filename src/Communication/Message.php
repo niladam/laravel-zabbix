@@ -144,7 +144,7 @@ class Message implements JsonSerializable
         Assert::notNull($this->value, 'You have not set the "value" value on your message. Use usingValue() to do that.');
     }
 
-    public function serialized(): mixed
+    public function serialized(): array
     {
         return $this->jsonSerialize();
     }
@@ -156,7 +156,7 @@ class Message implements JsonSerializable
         return $this->manager->send();
     }
 
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): array
     {
         $this->validate();
 

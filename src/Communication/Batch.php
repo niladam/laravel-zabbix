@@ -18,7 +18,7 @@ class Batch implements JsonSerializable
 
     public function add(Message $message): void
     {
-        $this->batch['data'][] = $message->serialized();
+        $this->batch['data'][] = $message;
     }
 
     public function getBatch(): array

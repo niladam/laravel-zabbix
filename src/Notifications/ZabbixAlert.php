@@ -14,6 +14,8 @@ abstract class ZabbixAlert extends ZabbixNotification implements SentViaZabbix
 {
     protected ?ZabbixManager $manager = null;
 
+    public ?string $message = null;
+
     public function __construct(
         ?string $message = null
     ) {
@@ -27,12 +29,14 @@ abstract class ZabbixAlert extends ZabbixNotification implements SentViaZabbix
             $message = $this->getMessage();
         }
 
+        $this->message = $message;
+
         $this->manager->add(
-            $this->toMessage($message)
+            $this->asZabbixMessage($message)
         );
     }
 
-    protected function toMessage(string $message): Message
+    protected function asZabbixMessage(string $message): Message
     {
         $hostConfiguration = $this->getValidConfiguration();
 
@@ -74,7 +78,7 @@ abstract class ZabbixAlert extends ZabbixNotification implements SentViaZabbix
      *
      * @return bool|Response
      */
-    public function send(): mixed
+    public function send()
     {
         return $this->manager->send();
     }
@@ -89,5 +93,10 @@ abstract class ZabbixAlert extends ZabbixNotification implements SentViaZabbix
     public function toZabbix($notifiable): ZabbixAlert
     {
         return $this;
+    }
+
+    public function getAlertMessage(): string
+    {
+        return $this->message;
     }
 }
