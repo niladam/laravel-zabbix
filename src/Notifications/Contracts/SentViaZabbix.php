@@ -26,7 +26,7 @@ interface SentViaZabbix
     /**
      * @return bool|Response
      */
-    public function send(): mixed;
+    public function send();
 
     public function toZabbix($notifiable);
 }
