@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-zabbix` will be documented in this file.
 
+## 1.1.3 - 2024-12-31
+
+Fix incorrect filename in composer json for Laravel.
+
 ## 1.1.1 - 2024-12-31
 
 Add the workflows to their correct locations.
