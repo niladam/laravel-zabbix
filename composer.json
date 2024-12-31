@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Niladam\\LaravelZabbix\\ZabbixServiceProvider"
+                "Niladam\\LaravelZabbix\\LaravelZabbixServiceProvider"
             ]
         }
     },
