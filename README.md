@@ -1,4 +1,5 @@
 ![Tests](https://github.com/niladam/laravel-zabbix/actions/workflows/run-tests.yml/badge.svg)
+[![Total Downloads](https://img.shields.io/packagist/dt/niladam/laravel-zabbix.svg?style=flat-square)](https://packagist.org/packages/niladam/laravel-zabbix)
 
 # Laravel Zabbix Integration
 
