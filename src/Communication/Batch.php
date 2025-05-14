@@ -26,7 +26,7 @@ class Batch implements JsonSerializable
         return $this->batch;
     }
 
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): array
     {
         return $this->batch;
     }

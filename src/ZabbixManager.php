@@ -2,6 +2,7 @@
 
 namespace Niladam\LaravelZabbix;
 
+use Throwable;
 use JsonException;
 use Niladam\LaravelZabbix\Communication\Batch;
 use Niladam\LaravelZabbix\Communication\Agent;
